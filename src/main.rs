@@ -9,11 +9,11 @@ use color::color;
 
 fn main() {
     let precision = 500;
-    let (width, hieght) = (10000, 10000);
+    let (width, height) = (10000, 10000);
     let scalar = 4.0;
 
-    let img = ImageBuffer::from_fn(width, hieght, |x, y| {
-        let (x_alpha, y_alpha): (f64, f64) = (x as f64 / width as f64, y as f64 / hieght as f64);
+    let img = ImageBuffer::from_fn(width, height, |x, y| {
+        let (x_alpha, y_alpha): (f64, f64) = (x as f64 / width as f64, y as f64 / height as f64);
 
         let (x_c, y_c): (f64, f64) = (
             x_alpha * scalar - scalar * 0.5,
